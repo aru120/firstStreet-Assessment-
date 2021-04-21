@@ -13,8 +13,9 @@ export default function Videos({description, title,thumbnailLarge,thumbnailMediu
 
     return(
         <>
-        <div className="videoWrapper">
+       
         <div className="videoContainer">
+
             <div className="row">
 
                 <div className="column1">
@@ -39,44 +40,32 @@ export default function Videos({description, title,thumbnailLarge,thumbnailMediu
 
             <style jsx>{`
 
+
                 .videoContainer{
                     margin: 20px 20px;
-                    max-height: ${expand ? "100%" : "300px"};
+                    max-height: ${expand ? "100%" : "350px"};
                     overflow: hidden;
                     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
                 }
                
-                
-
-
-
                 .toggle{
                     position: relative;
                 }
 
                 .row{
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    width: 100%;
-                    
+                    display: flex;                    
                 }
                 .column1{
                     padding: 10px;
-                    display: flex;
-                    flex-direction: column;
-                    flex-basis: 100%;
-                    flex: 2;
+                   
+                    flex: 1;
                     
                 }
             
                 .column2{
                     padding: 10px
-                    display:flex;
-                    flex-direction: column;
-                    flex-bases: 100%;
-                    // min-height: auto;
-                    flex: 1;
+                   
+                    flex: 2;
                     
                 }
 
@@ -144,9 +133,30 @@ export default function Videos({description, title,thumbnailLarge,thumbnailMediu
                 .overlay:hover::before{
                     opacity: 0.5;
                 }
+
+
+                @media (max-width: 767px){
+                    .row{
+                        display:flex;
+                        flex-direction: column-reverse;
+                        max-width: 500px;
+                    }
+                    .title{
+                        font-size:28px;
+                    }
+                    .content{
+                        font-size: 20px;
+                    }
+
+                    .videoContainer{
+                        max-height: ${expand ? "100%" : "450px"};
+
+                    }
+
+                }
             `}
             </style>
-        </div>
+        
 
         </>
     )

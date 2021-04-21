@@ -4,13 +4,13 @@ import globalStyles from '../styles/global'
 
 export default function Layout({children}){
     return(
-    <>
+    <div className="layout">
         <Nav />
         {children}
         <Footer />
     <style jsx global>
         {globalStyles}
     </style>
-    </>
+    </div>
     )
 }

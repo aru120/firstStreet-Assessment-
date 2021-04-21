@@ -24,8 +24,7 @@ export default function Footer(){
                     </ul>
                     </div>
                 </div>
-             </div> 
-          
+            </div>          
 
             <div className="footer-bar">
               <div className="logo">
@@ -41,13 +40,15 @@ export default function Footer(){
             </div>                          
             <style jsx>{`
                 .footer-bar{
+                    margin-left: auto;
+                    margin-right: auto;
+                    left: 0;
+                    right: 0;
                     width: 90%;
               height: 70px;
-              margin-left: 5%;
-              margin-right: 10%;
+            
               padding-top: 15px;
               text-align:center;
-              position: absolute;
               z-index: 1;
               border-top: 1px solid #E8E8E8;
                 }
@@ -78,7 +79,7 @@ export default function Footer(){
                 }
 
                 .column{
-                    width: 50%;
+                    width: 100px;
                     display: table-cell;
                     padding-right: 50px;
                    
@@ -98,7 +99,7 @@ export default function Footer(){
                 }
 
                 .listSection{
-                    width: 400px;
+                    width: 280px;
                     padding: 80px 40px;
                     overflow: hidden;
                 }

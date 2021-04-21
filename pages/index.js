@@ -1,20 +1,19 @@
+import Footer from '../components/Footer'
 import HeroContainer from '../components/HeroContainer'
 import Nav from '../components/Nav'
 import Videos from '../components/Videos'
 
 export default function Home({videos}){
     return(
-        <div className="mockBody">
+        <div>
             <HeroContainer />
-            <div>
-                
+            <div>   
                 {videos.map(video => {
                     return <Videos key={video.id} description={video.description} title={video.title} 
                     thumbnailLarge={video.thumbnail_large} thumbnailMedium={video.thumbnail_medium} 
                     thumbnailSmall={video.thumbnail_small} url={video.url}/>
                 })}
             </div>
-          
                 
 
         </div>
