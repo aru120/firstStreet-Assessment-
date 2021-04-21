@@ -5,7 +5,7 @@ export default function Footer(){
         <div>
             <div className="listSection">
                 <div className="row">
-                    <div className="column"> 
+                    <div className="left"> 
                     <h2>Fake Site</h2>
                     <ul>
                         <li>About us</li>
@@ -14,7 +14,7 @@ export default function Footer(){
                         <li>Help</li>
                     </ul>
                     </div>
-                    <div className="column">   
+                    <div className="right">   
                     <h2>Account</h2>    
                     <ul>
                         <li>Edit Profile</li>
@@ -40,7 +40,7 @@ export default function Footer(){
             </div>                          
             <style jsx>{`
                 .footer-bar{
-                    margin-left: auto;
+                margin-left: auto;
                     margin-right: auto;
                     left: 0;
                     right: 0;
@@ -75,7 +75,15 @@ export default function Footer(){
                 }
 
                 .row{
-                    display: table-row;
+                    display: flex;
+                }
+
+                .left{
+                    flex: 1;
+                }
+
+                .right{
+                    flex: 1;
                 }
 
                 .column{
@@ -85,14 +93,31 @@ export default function Footer(){
                    
                 }
 
-                .column h2{
+                .left h2{
                     font-size: 22px;
                     color: #EE2D1C;
                     line-height: 28px;
                     margin-bottom: 10px;
                 }
 
-                .column ul li{
+               
+
+                .left ul li{
+                    font-size: 22px;
+                    color: #88989E;
+                    line-height: 28px;
+                }
+
+                .right h2{
+                    font-size: 22px;
+                    color: #EE2D1C;
+                    line-height: 28px;
+                    margin-bottom: 10px;
+                }
+
+                
+
+                .right ul li{
                     font-size: 22px;
                     color: #88989E;
                     line-height: 28px;
@@ -100,9 +125,36 @@ export default function Footer(){
 
                 .listSection{
                     width: 280px;
-                    padding: 80px 40px;
+                    padding-top: 80px;
+                    padding-bottom: 80px;
+                    margin-left: 100px;
                     overflow: hidden;
                 }
+
+                @media (max-width: 767px){
+
+                    .listSection{
+                        margin-left: 13px;
+                    }
+
+                    
+
+                    .left ul li{
+                        font-size: 18px;
+                    }
+                    .right ul li{
+                        font-size: 18px;
+                    }
+                   
+                    .footer-bar ul{
+                        padding-top: 13px;
+                        padding-right: 8px;
+                    }
+                    .footer-bar li{
+                        font-size: 18px;
+                    }
+                }
+
             `}</style>
 
         </div>

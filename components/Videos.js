@@ -19,7 +19,7 @@ export default function Videos({description, title,thumbnailLarge,thumbnailMediu
             <div className="row">
 
                 <div className="column1">
-                     <h1 className="title">{title}</h1>
+                     <h2 className="title">{title}</h2>
                      <div className="content" dangerouslySetInnerHTML={{__html:linkify(description) }} />     
                 </div>
             
@@ -50,8 +50,13 @@ export default function Videos({description, title,thumbnailLarge,thumbnailMediu
                
                 .toggle{
                     position: relative;
+                    padding-left: 20px;
+                    
                 }
 
+                .toggle:hover{
+                    cursor: pointer;
+                }
                 .row{
                     display: flex;                    
                 }
@@ -70,10 +75,8 @@ export default function Videos({description, title,thumbnailLarge,thumbnailMediu
                 }
 
                 .title{
-                    font-size: 36px;
-                    line-height: 36px;
+                    
                     margin-bottom: 20px;
-                    color: #4C4C51
                     overflow: hidden;
                 }
 

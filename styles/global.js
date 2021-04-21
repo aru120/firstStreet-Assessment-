@@ -8,16 +8,39 @@ export default css.global`
 //   }
    
     body{
-       
         font-family: 'Source Sans Pro'
     }
 
-    li:hover{
-       
-            color: #FFF;
-            transition: 0.5s;
+    li:hover{           
             cursor: pointer;
         
+    }
+    li{
+        color:#4C4C51;
+    }
+
+    h1{
+        font-size:48px;
+        line-height:48px;
+        color:#FFF;
+    }
+
+    h2{
+        font-size: 36px;
+        line-height:36px;
+        color: #88939E;
+    }
+
+    p{
+        font-size: 22px;
+        line-height:28px;
+        color: #4C4C51;
+    }
+
+    @media (max-width: 767px){
+        p{
+            font-size:18px;
+        }
     }
 
     @font-face {

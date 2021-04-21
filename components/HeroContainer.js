@@ -75,6 +75,16 @@ export default function HeroContainer(){
                     .heroHeader{
                         font-size: 36px;
                     }
+                    .heroSub{
+                        font-size: 18px;
+                        width:100%;
+                    }
+                    .redBtn{
+                        font-size:18px;
+                    }
+                    .heroText{
+                        text-align: left;
+                    }
                 }
 
             `

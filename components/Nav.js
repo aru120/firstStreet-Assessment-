@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import Hamburger from '../components/Hamburger';
 import React, { useState } from 'react';
+import Link from 'next/link'
+
+
 export default function Nav(){
 
     const [hamburgerOpen, sethamburgerOpen] = useState(false);
@@ -13,10 +16,13 @@ export default function Nav(){
         <div className="nav-bar">
         <nav className="nav-container">
             <div className="logo">
-             <Image  src="/assets/logo/logo.png" alt="logo" width={60} height={48}/>
+           <Link href="/">
+             <Image  src="/assets/logo/logo.png" alt="logo" width={60} height={48}/> 
+             </Link>
             </div>
                 <ul>
-                    <li>Account</li>
+                   <Link href="/account"><li>Account</li></Link>
+                   <Link href="/about"><li>About</li></Link>
                     <li>Help</li>
                     <div className="userImage">
                     <Image src="/croppedHS.png" width={50} height={50}/>
@@ -66,8 +72,32 @@ export default function Nav(){
                 height: 24px;
                 // display: inline;
                 font-size: 22px;
-                color: #88939E
             }
+
+            .nav-bar li:hover{
+                color: #88939E;
+                transition: 0.5s;
+        }
+
+        
+        .logo{
+            float: left;      
+        }
+        .logo:hover{
+            cursor: pointer;
+        }
+        
+        .userImage{
+            border: 2px white solid;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+
+
+
+
+
 
             @media (max-width: 767px){
                 .nav-bar{
@@ -79,8 +109,9 @@ export default function Nav(){
                      display: ${hamburgerOpen ? 'inline' : 'none'};
                     //   flex-flow: column nowrap;
                       width: 50vw;
-                      height: 20vh;
+                      height: 50vh;
                       background-color: #FFF;
+                      opacity: 0.9;
                       padding-top: 60px;   
                       position: absolute;
                 }
@@ -88,10 +119,13 @@ export default function Nav(){
                 .logo{
                     padding-top: 15px;
                 }
+
+               
+                
                 .nav-bar li{
                     font-size: 30px;
                     padding-bottom: 20px;
-                    border: 1px solid #E8E8E8;
+                    border-bottom: 1px solid #E8E8E8;
                     
                 }
 
@@ -108,21 +142,7 @@ export default function Nav(){
                
             }
 
-            .nav-bar li:hover{
-
-            }
-
-            .logo{
-               
-                float: left;
-               
-            }
             
-            .userImage{
-                border: 2px white solid;
-                border-radius: 50%;
-                overflow: hidden;
-            }
 
             
 

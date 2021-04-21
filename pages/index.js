@@ -1,5 +1,6 @@
 import Footer from '../components/Footer'
 import HeroContainer from '../components/HeroContainer'
+import MainPageCloser from '../components/MainPageCloser'
 import Nav from '../components/Nav'
 import Videos from '../components/Videos'
 
@@ -15,7 +16,7 @@ export default function Home({videos}){
                 })}
             </div>
                 
-
+              <MainPageCloser />  
         </div>
 
     )
