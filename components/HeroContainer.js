@@ -14,13 +14,13 @@ export default function HeroContainer(){
                 <div className="heroText">
                     <div className="heroHeader">The World's greatest fake site</div>
                     <div className="heroSub">Create the world's greatest fake site and enjoy the breeze of fresh air when you complete it</div>
-                    <button>Do something awesome</button>
+                    <button className="redBtn">Do something awesome</button>
                     </div>
                 {/* </div>   */}
 
 
             <style jsx>{`
-                button {
+                .redBtn {
                     background-color: #EE2D1C;
                     border: none;
                     padding: 0 20px;
@@ -28,6 +28,11 @@ export default function HeroContainer(){
                     color: #FFF;
                     min-height: 55px;
                     font-size: 22px;
+                }
+
+                .redBtn:hover{
+                    transform: scale(1.07);
+                    cursor: pointer;
                 }
 
                 
@@ -38,7 +43,6 @@ export default function HeroContainer(){
                     background: url(${heroImage}) no-repeat center;
                     background-size: cover;
                     height: 628px;
-                    z-index: -2;
                     margin-bottom: 40px;
                     
                     

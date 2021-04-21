@@ -100,7 +100,7 @@ export default function Footer(){
                 .listSection{
                     width: 400px;
                     padding: 80px 40px;
-
+                    overflow: hidden;
                 }
             `}</style>
 

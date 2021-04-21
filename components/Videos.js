@@ -85,13 +85,15 @@ export default function Videos({description, title,thumbnailLarge,thumbnailMediu
                     line-height: 36px;
                     margin-bottom: 20px;
                     color: #4C4C51
+                    overflow: hidden;
                 }
 
                 .content{
                     font-size: 22px;
                     line-height: 28px;
                     color: #4C4C51;
-                    
+                    overflow: hidden;
+
 
                 }
                 .overlay{

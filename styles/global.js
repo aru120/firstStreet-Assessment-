@@ -16,7 +16,13 @@ export default css.global`
         font-family: 'Source Sans Pro'
     }
 
-
+    li:hover{
+       
+            color: #FFF;
+            transition: 0.5s;
+            cursor: pointer;
+        
+    }
 
     @font-face {
         font-family: 'Source Sans Pro';

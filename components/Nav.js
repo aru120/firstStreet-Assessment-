@@ -10,7 +10,9 @@ export default function Nav(){
                 <ul>
                     <li>Account</li>
                     <li>Help</li>
-                    <li>Image Place Holder</li>
+                    <div className="userImage">
+                    <Image src="/croppedHS.png" width={50} height={50}/>
+                    </div>
                 </ul>
         </nav>
 
@@ -24,7 +26,6 @@ export default function Nav(){
               text-align:center;
               position: absolute;
               z-index: 1;
-
               
             }
 
@@ -38,11 +39,19 @@ export default function Nav(){
             }
             .nav-bar li{
                 list-style-type: none;
-                padding: 15px 25px;
+                padding-top: 15px;
+                padding-right: 35px;
                 height: 24px;
                 display: inline;
                 font-size: 22px;
                 color: #88939E
+            }
+
+            @media (max-width: 767px){
+                .nav-bar ul{
+                      flex-flow: column nowrap;
+                      position: fixed;  
+                }
             }
 
             .nav-bar li:hover{
@@ -54,6 +63,13 @@ export default function Nav(){
                 float: left;
                
             }
+            
+            .userImage{
+                border: 2px white solid;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
             
 
         `
